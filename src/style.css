@@ -2,23 +2,6 @@
   padding: 15px;
 }
 
-.field-label {
-  font-size: 16px;
-  color: #7f7c82;
-}
-
-.field-input {
-  border-color: #D9D7E0;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  color: #232144;
-  display: block;
-  font-size: 16px;
-  padding: 12px 5px;
-  width: 100%;
-}
-
 .powered-by {
     display: flex;
     justify-content: center;
@@ -38,6 +21,8 @@
   color: white;
   background-color: #663399;
   margin-top: 16px;
+  color: white;
+  font-weight: 400;
 }
 
 .preview-button:hover {
@@ -50,10 +35,4 @@ p {
   font-size: 16px;
   margin-bottom: 0;
   margin-right: 5%;
-}
-
-preview-link {
-  color: white;
-  font-weight: 400;
-  text-decoration: none;
 }
