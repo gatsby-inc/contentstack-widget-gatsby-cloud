@@ -1,13 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from 'prop-types';
 
 import './style.css';
 import Gatsby from "./Gatsby";
 
-const Main = ({ config, entryData, contentType }) => {
+const Main = ({ config, entryData }) => {
   const { instanceUrl, authToken } = config;
   const { url } = entryData;
-  const { uid } = contentType
 
   return (
     <div className="container">
@@ -20,7 +19,6 @@ const Main = ({ config, entryData, contentType }) => {
                   const normalize = part => part.replace(/\/$/, "");
 
                   const entryUrl = url.startsWith("/") ? url.slice(1) : url;
-                  const contentTypeUrl = uid;
                   const normalizedInstanceUrl = normalize(instanceUrl);
                   
                   const pathQuery = `query getQualifiedSlug($entryUrl:String) { sitePage( path:{ ${entryUrl ? `regex` : `eq`}:$entryUrl } ) { path } }`;
@@ -46,10 +44,7 @@ const Main = ({ config, entryData, contentType }) => {
                   } catch (e) {
                     console.error(e);
 
-                    let path = contentTypeUrl === "home_page" ? "" : `/${contentTypeUrl}`;
-                    path += "/" + entryUrl;
-
-                    window.open(`${normalizedInstanceUrl}${path}`);
+                    window.open(`${normalizedInstanceUrl}/${entryUrl}`);
                   }
                 }
               }
@@ -72,7 +67,6 @@ const Main = ({ config, entryData, contentType }) => {
 Main.propTypes = {
   config: PropTypes.object,
   entryData: PropTypes.object,
-  contentType: PropTypes.object,
 }
 
 export default Main;
