@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:gatsby-inc/contentstack-widget-gatsby-cloud.git",
-  "author": "Dustin Schau <dustin@gatsbyjs.com>",
+   "author": "Rizchel Wood <rizchel@gatsbyjs.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
