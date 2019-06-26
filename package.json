@@ -27,6 +27,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.5",
-    "@gatsby-cloud-pkg/gatsby-cms-extension-base": "0.0.14"
+    "@gatsby-cloud-pkg/gatsby-cms-extension-base": "0.0.16"
   }
 }
