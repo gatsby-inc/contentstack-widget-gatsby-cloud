@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import { ExtensionUI } from "@gatsby-cloud-pkg/gatsby-cms-extension-base"
 
 const Main = ({ config, entryData }) => {
-  const { instanceUrl, authToken } = config;
+  const { siteUrl, authToken } = config;
   const { url } = entryData;
   let entryUrl;
   if (typeof url === `string`)  entryUrl = url
   
   return (
     <div className="container" style={{ padding: '15px' }}>
-        <ExtensionUI contentSlug={entryUrl} previewInstanceUrl={instanceUrl} authToken={authToken} />
+        <ExtensionUI contentSlug={entryUrl} siteUrl={siteUrl} authToken={authToken} />
     </div>
   )
 }
